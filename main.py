@@ -11,7 +11,7 @@ week_header = "Понедельник	Вторник	Среда	Четверг	�
 
 empty_week = [[(0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)]]
 
-with open("calendar.tsv", 'w') as file:
+with open(f"calendar{year}.tsv", 'w') as file:
 	for i in range(1, 13, 4):
 		first, second, third, fourth = i, i + 1, i + 2, i + 3
 		month_row = f'{"	" * 3}{months[first]}{"	" * 8}{months[second]}{"	" * 8}{months[third]}{"	" * 8}{months[fourth]}'
